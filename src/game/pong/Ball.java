@@ -30,14 +30,14 @@ public class Ball extends GameObject {
 		
 		if(x < 0 || x >= Game.WIDTH - width ) velX *= -1;
 		if(y < 40 || y >= Game.HEIGHT - height - 20) velY *= -1;
-		Game.gameContext.addGameObject(new Trail(x, y, width, height, Color.RED));
+		Game.gameContext.addGameObject(new Trail(x, y, width, height, Color.ORANGE));
 		
 	}
 
 	@Override
 	public void render(Graphics2D g) {
 		
-		g.setColor(Color.RED);
+		g.setColor(Color.ORANGE);
 		g.fillOval(x, y, width, height);
 		
 		// HitBox

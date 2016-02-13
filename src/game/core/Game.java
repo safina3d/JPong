@@ -8,6 +8,7 @@ import game.pong.Ball;
 import game.pong.Fenetre;
 import game.pong.HUD;
 import game.pong.Raquette;
+import game.pong.RaquetteIA;
 
 public class Game implements Runnable {
 
@@ -37,9 +38,9 @@ public class Game implements Runnable {
 	
 	public void initGame(){
 		HUD hud = new HUD(0, 0);
-		Raquette raqueteG = new Raquette(10, 40);
-		Raquette raqueteD = new Raquette(WIDTH-30, 160);
 		Ball ball = new Ball(200, 200);
+		Raquette raqueteG = new Raquette(10, 40);
+		Raquette raqueteD = new RaquetteIA(WIDTH-30, 160, ball);
 	
 		gameContext.addGameObject(hud);
 		gameContext.addGameObject(raqueteG);

@@ -13,7 +13,7 @@ import game.tools.Utils;
 
 public class Raquette extends GameObject implements KeyListener {
 	
-	private static final int VITESSE = 5;
+	protected static final int VITESSE = 5;
 	private BitSet keys = new BitSet(2); 
 	
 	public Raquette(int x, int y) {
