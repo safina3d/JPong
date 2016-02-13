@@ -18,7 +18,7 @@ public class RaquetteIA extends Raquette {
 	
 	public void setBall(GameObject ball) { this.ball = ball; } 
 	
-    public void moveAi(){
+    private void moveIA(){
         if(ball.getX() >= Game.WIDTH/2){    
             if(ball.getY() < y && y>=2)
             	this.setVelY(-VITESSE);
@@ -36,7 +36,7 @@ public class RaquetteIA extends Raquette {
 
 	@Override
 	public void update() {
-		moveAi();
+		moveIA();
 		y += velY;
 		y = Utils.clamp(y, 40, Game.HEIGHT - height - 20);	
 	}
